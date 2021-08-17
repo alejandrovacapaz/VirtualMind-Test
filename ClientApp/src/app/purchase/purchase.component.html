@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h1>Save Currency Purchase</h1>
+
+  <div class="row mb-3">
+    <div class="col-4">
+      <label class="form-label">Selected currency:</label>
+      <select class="form-select" [(ngModel)]="exchangeDto.currency">
+        <option selected value="0">USD</option>
+        <option value="1">BRL</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label class="form-label">User:</label>
+      <input type="text" placeholder="UserID" [(ngModel)]="exchangeDto.userId" class="form-control" maxlength="2" />
+    </div>
+    <div class="col-3">
+      <label class="form-label">Amount:</label>
+      <input type="text" placeholder="Exchage" [(ngModel)]="exchangeDto.amount" class="form-control" maxlength="6" />
+    </div>
+
+    <div class="col-2" style="margin-top: 30px !important">
+      <button (click)="purchase()" class="btn btn-primary">Purchase</button>
+    </div>
+  </div>
+</div>
